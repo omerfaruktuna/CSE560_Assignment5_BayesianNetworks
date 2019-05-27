@@ -1,7 +1,6 @@
 
 from data_structure import *
 
-
 with open('bn.txt', 'r') as f:
   dataset = []
   content = f.readlines()
@@ -21,21 +20,15 @@ for data in dataset:
   col_1.append(data[0])
   col_2.append(data[1])
 
-
 O = head_node(col_1[0])
-
-
 A = middle_node(col_2[0])
 B = middle_node(col_2[1])
-
 C = end_node(col_2[3])
-
 
 O.first_connection = A
 O.second_connection = B
 A.connection = C
 B.connection = C
-
 
 with open('O.txt', 'r') as f:
   dataset = []
